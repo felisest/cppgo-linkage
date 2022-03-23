@@ -30,3 +30,12 @@
 *.exe
 *.out
 *.app
+
+# Test binary, built with `go test -c`
+*.test
+
+# Folders
+build_release/
+.vscode/
+
+/cpp/libgo/libgoex.h
