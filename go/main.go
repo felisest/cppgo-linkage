@@ -2,7 +2,7 @@ package main
 
 /*
 #cgo CFLAGS: -I./lib
-#cgo LDFLAGS: -L./lib/build_release -lcpp_go_shared -Wl,-rpath=./lib/build_release
+#cgo LDFLAGS: -L./lib/build_release -lcpp_go_static -Wl,-rpath=./lib/build_release -lstdc++
 
 #include "lib/simple_lib.h"
 */
@@ -23,4 +23,9 @@ func main() {
 	C.reverse_vector(c_buff, C.int(len(buff)))
 	fmt.Println(C.GoStringN((*C.char)(c_buff), C.int(len(buff)+1)))
 	C.free(unsafe.Pointer(c_buff))
+
+	num := 7
+	s := C.lsqrt(C.int32_t(num))
+	fmt.Printf("sqrt of %d = %d\n", num, s)
+
 }

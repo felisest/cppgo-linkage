@@ -14,4 +14,6 @@ extern "C" void reverse_vector(void* in_buff, int size) {
 		if (--r-i <= 1) break;
     }
 }
-
+extern "C" int64_t lsqrt(int32_t num) {
+    return num * num;
+}
