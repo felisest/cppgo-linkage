@@ -9,7 +9,7 @@ extern "C" void reverse_vector(void* in_buff, int size) {
     int r = size;
     for (int i = 0; i < size; i++) {
 
-        std::swap(*((char*)in_buff + r), *((char*)in_buff + i));
+        std::swap(*((char*)in_buff + r - 1), *((char*)in_buff + i));
 
 		if (--r-i <= 1) break;
     }
