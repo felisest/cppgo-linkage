@@ -9,7 +9,7 @@ This folder holds *c++* references to *go* library examples
 - run `/cpp/build_cpp.sh`
 
 ## go
-This folder holds *go* references to *c++* labrary examples
+This folder holds *go* references to *c++* library examples
 
 ### Building
 
